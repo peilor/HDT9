@@ -18,11 +18,7 @@ public class Archivo{
 
     
     /**
-     * Nombre: obtenerArchivo
-     * Descripcion: obtiene el archivo
-     * No hay valor de retorno
-     * @param direccion
-     * @throws FileNotFoundException
+     * obtenerArchivo: Método que obtiene el archivo
      */
     public void obtenerArchivo() throws FileNotFoundException{
        String direccion = new File("datos.txt").getAbsolutePath(); 
@@ -30,11 +26,7 @@ public class Archivo{
     }  
     
     /**
-     * Nombre: arregloNombres
-     * Descripcion: obtiene los nombres de los nodos para el grafo
-     * No tiene parametros
-     * @return
-     * @throws IOException
+     * arregloNombres: Método que obtiene los nombres de los nodos para el grafo
      */
     public Matriz arregloNombres() throws IOException{
         // Lectura del fichero
@@ -44,20 +36,14 @@ public class Archivo{
         while((linea=br.readLine())!=null){
             String[] tmp;
             tmp=linea.split(" ");
-            grafo.add(tmp[0]);
-            grafo.add(tmp[1]);
+            grafo.agregarNodo(tmp[0]);
+            grafo.agregarNodo(tmp[1]);
         }
         return grafo;
     }
     
     /**
-     * Nombre: write
-     * Descripcion: escritura del archivo
-     * Pre: no hay
-     * Post: archivo escrito
-     * No hay valor de retorno
-     * @param cadena
-     * @throws IOException
+     * write: Método que escribe en el archivo
      */
     public void write(String cadena) throws IOException{
         fw = new FileWriter(archivo);
@@ -66,11 +52,7 @@ public class Archivo{
     }
     
     /**
-     * Nombre: matrizCostos
-     * Descripcion: obtiene los pesos de los arcos entre nodos del grafo
-     * No tiene parametros
-     * @return
-     * @throws IOException
+     * matrizCostos: Método que obtiene los pesos de los arcos entre nodos del grafo
      */
     public Matriz matrizCostos() throws IOException{
         // Lectura del fichero
@@ -81,7 +63,7 @@ public class Archivo{
         while((linea=br.readLine())!=null){
             String[] tmp;
             tmp=linea.split(" ");
-            grafo.addEdge(tmp[0], tmp[1], tmp[2]);
+            grafo.agregarConexion(tmp[0], tmp[1], tmp[2]);
         }
         return grafo;
     }

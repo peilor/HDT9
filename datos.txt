@@ -1,0 +1,4 @@
+cuidad1 cuidad2 10
+cuidad1 cuidad3 20
+cuidad3 cuidad2 30
+cuidad2 cuidad1 40
