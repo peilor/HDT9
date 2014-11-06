@@ -14,7 +14,7 @@ public class Archivo{
     BufferedReader br;
     FileWriter fw;
     PrintWriter pw;
-    Matriz grafo = new Matriz();
+    MatrizGrafo grafo = new MatrizGrafo();
 
     
     /**
@@ -28,7 +28,7 @@ public class Archivo{
     /**
      * arregloNombres: Método que obtiene los nombres de los nodos para el grafo
      */
-    public Matriz arregloNombres() throws IOException{
+    public MatrizGrafo arregloNombres() throws IOException{
         // Lectura del fichero
         fr = new FileReader (archivo);
         br = new BufferedReader(fr);
@@ -54,7 +54,7 @@ public class Archivo{
     /**
      * matrizCostos: Método que obtiene los pesos de los arcos entre nodos del grafo
      */
-    public Matriz matrizCostos() throws IOException{
+    public MatrizGrafo matrizCostos() throws IOException{
         // Lectura del fichero
         fr = new FileReader (archivo);
         br = new BufferedReader(fr);

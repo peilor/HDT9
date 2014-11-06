@@ -8,10 +8,10 @@
 import java.io.File;
 import java.io.IOException;
 
-public class Grafo {
+public class Floyd {
     
     Archivo archivo= new Archivo();
-    Matriz matrizAdyacencia;
+    MatrizGrafo matrizAdyacencia;
     int[][] matrizNodosIntermedios;
     int[] maximo;
     int centro;
@@ -19,13 +19,13 @@ public class Grafo {
     String centroReturn="";
     
     /**
-     * Nombre: Grafo
+     * Nombre: Floyd
      * Descripcion: constructor de la clase
      * Pre: no hay
      * Post: nuevo grafo 
      * No hay parametros ni valor de retorno
      */
-    public Grafo(){
+    public Floyd(){
         
         try {
             
@@ -34,7 +34,7 @@ public class Grafo {
             archivo.obtenerArchivo();
             archivo.arregloNombres(); // Nombre de los nodos
             matrizAdyacencia = archivo.matrizCostos(); // Peso de los arcos entre nodos
-            matrizNodosIntermedios = new int[25][25]; // Matriz de nodos intermedios
+            matrizNodosIntermedios = new int[25][25]; // MatrizGrafo de nodos intermedios
             maximo = new int[25];
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -48,7 +48,7 @@ public class Grafo {
     
     /**
      * Nombre: caminoCorto
-     * Descripcion: algoritmo de Grafo para encontrar el camino mas corto entre todos los nodos
+     * Descripcion: algoritmo de Floyd para encontrar el camino mas corto entre todos los nodos
      * Basado en la presentacion de clase
      * Pre: existe una matrizAdyacencia de adyacencia con los valores iniciales del grafo
      * Post: matrizAdyacencia de adyacencia con los valores mas pequeños entre cada nodo

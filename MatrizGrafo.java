@@ -4,11 +4,11 @@ import java.util.Vector;
  * @author Pablo Argueta, Carnet: 13028
  * @author Héctor Möller, Carnet: 09002
  * 
- * Matriz.java
+ * MatrizGrafo.java
  * Descripcion: Contiene operaciones para crear la matriz de adyacencia.   
  * 
  */
-public class Matriz<V,E> implements GrafoInterface<V,E>{
+public class MatrizGrafo<V,E> implements GrafoInterface<V,E>{
 
     private Vector vertices = new Vector();
     private int[][] arcos= new int [25][25];
@@ -16,13 +16,13 @@ public class Matriz<V,E> implements GrafoInterface<V,E>{
     private String matrizTemporal="";
     
     /**
-     * Nombre: Matriz
+     * Nombre: MatrizGrafo
      * Descripcion: constructor de la clase
      * Pre: no hay
      * Post: el arreglo de arcos inicializado
      * No hay parametros ni valor de retorno
      */
-    public Matriz(){
+    public MatrizGrafo(){
         
         for(int i=0;i<25;i++){
             for(int j=0;j<25;j++){

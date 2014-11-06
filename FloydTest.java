@@ -11,9 +11,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class GrafoTest {
+public class FloydTest {
     
-    public GrafoTest() {
+    public FloydTest() {
     }
     
     @BeforeClass
@@ -38,7 +38,7 @@ public class GrafoTest {
     @Test
     public void testCaminoCorto() {
         System.out.println("caminoCorto");
-        Grafo instance = new Grafo();
+        Floyd instance = new Floyd();
         instance.caminoCorto();
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -50,7 +50,7 @@ public class GrafoTest {
     @Test
     public void testCentroGrafo() {
         System.out.println("centroGrafo");
-        Grafo instance = new Grafo();
+        Floyd instance = new Floyd();
         String expResult = "";
         String result = instance.centroGrafo();
         assertEquals(expResult, result);
@@ -66,7 +66,7 @@ public class GrafoTest {
         System.out.println("mostrarIntermedias");
         int num1 = 0;
         int num2 = 0;
-        Grafo instance = new Grafo();
+        Floyd instance = new Floyd();
         instance.mostrarIntermedias(num1, num2);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");

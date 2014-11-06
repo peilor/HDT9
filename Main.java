@@ -15,7 +15,7 @@ public class Main {
      */
     public static void main(String[] args){
         
-        Grafo matriz = new Grafo();
+        Floyd matriz = new Floyd();
         matriz.caminoCorto();
         int op2;
         int tipoMensaje = JOptionPane.QUESTION_MESSAGE;

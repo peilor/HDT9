@@ -11,9 +11,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class MatrizTest {
+public class MatrizGrafoTest {
     
-    public MatrizTest() {
+    public MatrizGrafoTest() {
     }
     
     @BeforeClass
@@ -39,7 +39,7 @@ public class MatrizTest {
     public void testAgregarNodo() {
         System.out.println("agregarNodo");
         Object contenido = null;
-        Matriz instance = new Matriz();
+        MatrizGrafo instance = new MatrizGrafo();
         instance.agregarNodo(contenido);
         instance.obtenerNodo(1);
         // TODO review the generated test code and remove the default call to fail.
@@ -55,7 +55,7 @@ public class MatrizTest {
         Object v1 = null;
         Object v2 = null;
         Object contenido = null;
-        Matriz instance = new Matriz();
+        MatrizGrafo instance = new MatrizGrafo();
         instance.agregarConexion(v1, v2, contenido);
         instance.obtenerNodo(1);
         // TODO review the generated test code and remove the default call to fail.
